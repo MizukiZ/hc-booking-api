@@ -1,5 +1,5 @@
 ActionMailer::Base.smtp_settings = {
-  :user_name => ['SENDGRID_USERNAME'],
+  :user_name => ENV['SENDGRID_USERNAME'],
   :password => ENV['SENDGRID_PASSWORD'],
   :domain => 'hc-booking-api.herokuapp.com',
   :address => 'smtp.sendgrid.net',
