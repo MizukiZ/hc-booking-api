@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  admin: one
+  days_availability: MyString
+  start_time: MyString
+  end_time: MyString
+  interval: MyString
+  duration: MyString
+
+two:
+  admin: two
+  days_availability: MyString
+  start_time: MyString
+  end_time: MyString
+  interval: MyString
+  duration: MyString

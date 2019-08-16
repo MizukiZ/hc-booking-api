@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_16_045409) do
+ActiveRecord::Schema.define(version: 2019_08_16_051932) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,19 @@ ActiveRecord::Schema.define(version: 2019_08_16_045409) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "settings", force: :cascade do |t|
+    t.bigint "admin_id"
+    t.string "days_availability"
+    t.string "start_time"
+    t.string "end_time"
+    t.integer "interval"
+    t.integer "duration"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["admin_id"], name: "index_settings_on_admin_id"
+  end
+
   add_foreign_key "appointments", "clients"
   add_foreign_key "appointments", "options"
+  add_foreign_key "settings", "admins"
 end
