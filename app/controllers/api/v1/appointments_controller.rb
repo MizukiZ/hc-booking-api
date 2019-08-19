@@ -5,7 +5,7 @@ module Api
 
       def index
         # get only feature appointments
-        appointments = Appointment.all.where('start_at >=?', DateTime.now.in_time_zone('Brisbane'))
+        appointments = Appointment.all.where('start_at >=?', DateTime.now.next_day(1).in_time_zone('Brisbane'))
         render json: { status: 'SUCCESS', message: 'loaded appointments', data: appointments }
       end
 
