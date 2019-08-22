@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before ActionDispatch::Static, Rack::Cors do
   allow do
-    origins Rails.application.config.x.cors_allowed_origins
+    origins Rails.application.config.x.cors_allowed_booking_origin, Rails.application.config.x.cors_allowed_admin_origin
 
     resource '*',
       headers: :any,
