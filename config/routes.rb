@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     namespace 'v1' do
      # version 1 routing
       resources :options, only: [:index]
-      resources :settings, only: [:index]
+      resources :settings, only: [:index, :update]
       resources :clients, only: [:index, :create, :update, :destroy]
       resources :appointments, only: [:index, :create, :update, :destroy]
       resources :payments, only: [:create]
