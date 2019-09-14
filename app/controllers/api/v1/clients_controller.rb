@@ -1,6 +1,7 @@
 module Api
   module V1
     class ClientsController < ApplicationController
+      before_action :authorize_request, except: :create
       before_action :set_client, only: [:update, :destroy]
 
       def index

@@ -1,6 +1,7 @@
 module Api
   module V1
    class SettingsController < ApplicationController
+    before_action :authorize_request
 
   def index
     settings = Setting.first

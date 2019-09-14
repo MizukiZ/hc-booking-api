@@ -1,6 +1,7 @@
 module Api
   module V1
     class AppointmentsController < ApplicationController
+      before_action :authorize_request, except: :create
       before_action :set_appointment, only: [:update, :destroy]
 
       def index
