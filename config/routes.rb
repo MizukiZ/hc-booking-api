@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resources :clients, only: [:index, :create, :update, :destroy]
       resources :appointments, only: [:index, :create, :update, :destroy]
       resources :payments, only: [:create]
+      resources :admins, only: :index
 
       # authentication routes
       scope :authentication, :controller => 'authentication' do
