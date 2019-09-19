@@ -9,7 +9,7 @@ module Api
   end
 
   def update
-    setting = Setting.find(params[:id])
+    setting = Setting.first
     
     if setting.update(setting_params)
       render json: { status: 'SUCCESS', message: 'settings successfully upated', data: setting }
