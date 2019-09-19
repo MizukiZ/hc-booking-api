@@ -1,7 +1,6 @@
 module Api
   module V1
    class OptionsController < ApplicationController
-    before_action :authorize_request
 
   def index
     options = Option.all

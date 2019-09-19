@@ -1,7 +1,7 @@
 module Api
   module V1
    class SettingsController < ApplicationController
-    before_action :authorize_request
+    before_action :authorize_request, except: :index
 
   def index
     settings = Setting.first
